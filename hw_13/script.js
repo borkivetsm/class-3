@@ -102,3 +102,39 @@ console.log(account.getBalance());
 console.log(account.getTransactionDetails(2));
 console.log(account.getTransactionTotal(Transaction.DEPOSIT));
 console.log(account.getTransactionTotal(Transaction.WITHDRAW));
+
+
+
+
+
+
+const user = {
+  name: 'Mango',
+  age: 20,
+  hobby: 'html',
+  premium: true,
+};
+
+const {name, age, hobby, premium} = user;
+console.log(name, age, hobby, premium);
+
+
+
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Сканер', price: 2700, quantity: 3 },
+  { name: 'Дроїд', price: 400, quantity: 7 },
+  { name: 'Захоплення', price: 1200, quantity: 2 },
+];
+
+const [
+  product1, product2, product3, product4
+] = products
+
+console.log(product1, product2, product3, product4);
+
+
+const {name, price, quantity} = product1;
+const {name2, price2, quantity2} = product2;
+const {name3, price3, quantity3} = product3;
+const {name4, price4, quantity4} = product4;
