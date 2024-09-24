@@ -134,7 +134,7 @@ const [
 console.log(product1, product2, product3, product4);
 
 
-const {name, price, quantity} = product1;
-const {name2, price2, quantity2} = product2;
-const {name3, price3, quantity3} = product3;
-const {name4, price4, quantity4} = product4;
+// const {name, price, quantity} = product1;
+// const {name2, price2, quantity2} = product2;
+// const {name3, price3, quantity3} = product3;
+// const {name4, price4, quantity4} = product4;
