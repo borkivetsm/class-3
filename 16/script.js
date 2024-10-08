@@ -174,21 +174,152 @@ getWage(baseSalary, overtime, rate);
 
 // }
 
-class User{
-    #email;
-    constructor(email) {
-        this.#email = email;
-    }
-    get email() {
-        return this.#email;
-    }
-    set email(newEmail) {
-        this.#email = newEmail;
-    }
-}
+// class User{
+//     #email;
+//     constructor(email) {
+//         this.#email = email;
+//     }
+//     get email() {
+//         return this.#email;
+//     }
+//     set email(newEmail) {
+//         this.#email = newEmail;
+//     }
+// }
 
-class Admin extends User{
+// class Admin extends User{
 
-}
-const admin = new Admin('admin@ukr.net');
-console.log(admin);
+// }
+// const admin = new Admin('admin@ukr.net');
+// console.log(admin);
+
+
+
+
+
+// class User {
+//     #email
+//     constructor(email) {
+//         this.#email = email;
+//     }
+
+//     get email() {
+//         return this.#email
+//     }
+
+//     set email(newEmail) {
+//         this.#email = newEmail;
+//     }
+// }
+
+// class Admin extends User {
+//     constructor({ email, posts}) {
+//         super(email);
+//         this.posts = posts;
+//     }
+//     addPosts(post) {
+//         this.posts.push(post);
+//     }
+// }
+
+// const admin = new Admin({email: 'admin@ukr.net', posts: []});
+// console.log(admin)
+// // console.log(admin.email);
+// admin.addPosts('New post');
+// admin.addPosts('New post 2');
+// console.log(admin.posts);
+
+
+
+// Створіть клас Person, що містить властивості firstName та lastName. Додайте метод getFullName(), який повертає повне ім'я у форматі "firstName lastName".
+// class Person {
+//     constructor(firstName, lastName) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+
+//     getFullName() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+// const person1 = new Person('John', 'Doe');
+// console.log(person1.getFullName()); // John Doe
+
+// const person2 = new Person('Margo', 'Borkivets');
+// console.log(person2.getFullName());
+
+
+
+// Створіть клас Calculator, який буде мати наступні методи: add(), subtract(), multiply(), divide(). 
+//Кожен метод приймає два аргументи - числа, які необхідно обробити. 
+//Результатом кожного методу має бути результат відповідної математичної операції.
+// class Calculator {
+//     add(x, y) {
+//         return x + y;
+//     };
+
+//     subtract(x, y) {
+//         return x - y;
+//     }
+
+//     multiply(x, y) {
+//         return x * y;
+//     }
+
+//     divide(x, y) {
+//         if(y === 0) {
+//             return 'impossible';
+//         }
+//         return x / y;
+//     }
+// }
+
+
+// const calculator = new Calculator();
+// console.log(calculator.add(2, 3)); // 5
+// console.log(calculator.subtract(5, 2)); // 3
+// console.log(calculator.multiply(2, 4)); // 8
+// console.log(calculator.divide(10, 2)); // 5
+// console.log(calculator.divide(10, 0)); //impossible
+
+
+
+
+
+// Створіть клас Animal, який має властивість name. Створіть клас Dog, який наслідується від Animal і має властивість breed. 
+// Створіть об'єкт myDog класу Dog з ім'ям Buddy і породою Labrador Retriever.
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
+// }
+
+// class Dog extends Animal {
+//     constructor(name, breed) {
+//         super(name)
+//         this.breed = breed;
+//     }
+// }
+
+// const myDog = new Dog('Buddy', 'Labrador Retriever');
+// console.log(myDog); // { name: 'Buddy', breed: 'Labrador Retriever' }
+
+
+
+
+// Створіть клас Rectangle, що містить властивості width та height. 
+// Додайте метод getArea(), який повертає площу прямокутника.
+// class Rectangle {
+//     constructor(width, height) {
+//         this.width = width;
+//         this.height = height;
+//     }
+
+//     getArea() {
+//         return this.width * this.height;
+//     }
+// }
+
+// const rectangle1 = new Rectangle(10, 5);
+// console.log(rectangle1.getArea()); // 50
