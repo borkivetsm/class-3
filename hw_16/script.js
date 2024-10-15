@@ -138,32 +138,58 @@ class Car {
      * isOn - заведений автомобіль, значення true або false. Спочатку false
      * distance - загальний кілометраж, спочатку 0
      */
-    constructor() {}
+    constructor(speed, price, maxSpeed, isOn, distance) {
+        this.speed = speed;
+        this.price = price;
+        this.maxSpeed = maxSpeed;
+        this.isOn = isOn;
+        this.distance = distance;
+    }
    
     /*
      * Додай геттер і сеттер для властивості price,
      * який буде працювати з властивістю ціни автомобіля.
      */
-   
+    getPrice() {
+        return this.price;
+    }
+
+    setPrice(newPrice) {
+        newPrice = this.price;
+        return this.price;
+    }
     /*
      * Додай код для того, щоб завести автомобіль
      * Записує у властивість isOn значення true
      */
-    turnOn() {}
+    turnOn() {
+        this.isOn = true;
+        return this.isOn;
+    }
    
     /*
      * Додай код для того, щоб заглушити автомобіль
      * Записує у властивість isOn значення false,
      * і скидає поточну швидкість в 0
      */
-    turnOff() {}
+    turnOff() {
+        this.isOn = false;
+        this.speed = 0;
+        return this.isOn, this.speed;
+    }
    
     /*
      * Додає до властивості speed отримане значення,
      * за умови, що результуюча швидкість
      * не більше, ніж значення властивості maxSpeed
      */
-    accelerate(value) {}
+    accelerate(value) {
+        let accSpeed = speed + value;
+        if (accSpeed <= maxSpeed) {
+            return accSpeed;
+        } return 'too fast'
+
+    }
    
     /*
      * Забирає від властивості speed отримане значення,
