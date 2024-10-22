@@ -127,7 +127,9 @@ class Car {
      * який приймає об'єкт-машину як параметр і виводить
      * в консоль значення властивостей maxSpeed, speed, isOn, distance и price.
      */
-   
+    // getSpecs(Car) {
+    //     console.log(this.maxSpeed, this.speed, this.isOn, this.distance, this.price);
+    // }
     /*
      * Конструктор отримує об'єкт налаштувань.
      *
@@ -139,11 +141,11 @@ class Car {
      * distance - загальний кілометраж, спочатку 0
      */
     constructor(speed, price, maxSpeed, isOn, distance) {
-        this.speed = speed;
+        this.speed = speed, 0;
         this.price = price;
         this.maxSpeed = maxSpeed;
-        this.isOn = isOn;
-        this.distance = distance;
+        this.isOn = isOn, false;
+        this.distance = distance, 0;
     }
    
     /*
@@ -184,8 +186,8 @@ class Car {
      * не більше, ніж значення властивості maxSpeed
      */
     accelerate(value) {
-        let accSpeed = speed + value;
-        if (accSpeed <= maxSpeed) {
+        let accSpeed = (this.speed + this.value);
+        if (accSpeed <= this.maxSpeed) {
             return accSpeed;
         } return 'too fast'
 
@@ -195,15 +197,28 @@ class Car {
      * Забирає від властивості speed отримане значення,
      * за умови, що результуюча швидкість не менше нуля
      */
-    decelerate(value) {}
+    decelerate(value) {
+        let decSpeed = (this.speed - this.value);
+        if (decSpeed > 0) {
+            return decSpeedSpeed;
+        } return 'too fast'
+    }
    
     /*
      * Додає в поле distance кілометраж (hours * speed),
      * але тільки в тому випадку, якщо машина заведена!
      */
-    drive(hours) {}
+    drive(hours) {
+        if (this.isOn === true) {
+            this.distance = (this.hours * this.speed)
+        } return ' car is not on'
+    }
    }
    
+   function getSpecs(Car) {
+    console.log(this.maxSpeed, this.speed, this.isOn, this.distance, this.price);
+   }
+
    const mustang = new Car({ maxSpeed: 200, price: 2000 });
    
    mustang.turnOn();
