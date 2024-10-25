@@ -124,3 +124,11 @@ const galleryItems = images
     .join(""); 
  
 gallery.insertAdjacentHTML("beforeend", galleryItems);
+
+galleryItems.style.width = '200px';
+galleryItems.style.height = '200px';
+
+// gallery.style.display = flex;
+// gallery.style.justifyContent = space-evenly;
+// gallery.style.flexDirection = row;
+
