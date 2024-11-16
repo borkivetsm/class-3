@@ -32,29 +32,51 @@ withdrawalBtn10.addEventListener('click', () => {
 
 
 //2
-// const temp = document.getElementById('temp').value;
-// console.log(temp)
-// const resultTemp = document.getElementById('resultTemp');
+const resultTemperature = document.getElementById('resultTemperature');
 
 const weather = {
     temperature: 0,
-    humidity: 10,
-    windSpeed: 10,
+    humidity: 0,
+    windSpeed: 20,
 
-    isCold: function() {
+    isCold() {
         if(this.temperature < 0) {
-            return "The temperature is below zero.";
+            resultTemperature.textContent = 'температура нижче 0 градусів Цельсія';
         } else {
-            return "The temperature is zero or above.";
+            resultTemperature.textContent = 'температура вище 0 градусів Цельсія';
         }
     },
-
-    setTemperature: function(tempInput) {
-        this.temperature = tempInput;
-    }
 };
 
-weather.setTemperature(-5);
+weather.temperature = 2;
+weather.isCold();
 
-console.log(weather.isCold());
 
+//3
+const inputEmail = document.getElementById('inputEmail').value;
+const inputPassword = document.getElementById('inputPassword').value;
+
+const user = {
+    name: 'John Doe',
+    email: 'johndoe@gmail.com',
+    password: 'securepassword123',
+
+    login(inputEmail, inputPassword) {
+        return this.email === inputEmail && this.password === inputPassword;
+    }
+}
+
+const login = function() {
+    const result = user.login(inputEmail, inputPassword);
+
+    alert(result ? 'Thanks for logging in!' : 'Email or password invalid');
+};
+
+
+//4
+const movie = {
+    title: 'Fairy',
+    director: 'John Doe',
+    year: 2000,
+    rating: 10,
+}
