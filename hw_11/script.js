@@ -79,4 +79,24 @@ const movie = {
     director: 'John Doe',
     year: 2000,
     rating: 10,
+
+    goodRating() {
+        if (this.rating > 8) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
+
+const movieStats = document.getElementById('movieStats');
+movieStats.textContent = `Movie "${movie.title}" from ${movie.director} released in ${movie.year}`;
+const movieRating = document.getElementById('movieRating');
+movieRating.textContent = `Rating: ${movie.rating}`
+
+const ratingColor = function() {
+    if(movie.goodRating() == true) {
+        movieRating.style.color = 'green';
+    }
+}
+
